@@ -1,0 +1,26 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: neondb_owner
+  password: npg_skEcwSr0vO2h
+  host: npg_skEcwSr0v02h0ep-falling-sound-ac1dhi5g-pooler.sa-east-1.aws.neon.tech
+  port: 5432
+  sslmode: require
+
+development:
+  <<: *default
+  database: neondb
+
+test:
+  <<: *default
+  database: neondb 
+
+production:
+  <<: *default
+
+  host: <%= ENV["DATABASE_HOST"] || "ep-mute-smoke-a87vngjh-pooler.eastus2.azure.neon.tech" %>
+  username: <%= ENV["DATABASE_USERNAME"] || "neondb_owner" %>
+  password: <%= ENV["DATABASE_PASSWORD"] %>
+  database: <%= ENV["DATABASE_NAME"] || "neondb" %>
+  sslmode: require
