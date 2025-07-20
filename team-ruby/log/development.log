@@ -1,0 +1,942 @@
+Started GET "/team_tasks/" for ::1 at 2025-07-19 21:47:10 -0300
+  
+ActiveRecord::ConnectionNotEstablished (connection to server at "2600:1f1e:2f:652d:21b7:8d2c:78a1:afcf", port 5432 failed: ERROR:  Project name ('npg_skecwsr0v02h0ep-falling-sound-ac1dhi5g-pooler') must contain only alphanumeric characters and hyphen.
+)
+Caused by: PG::ConnectionBad (connection to server at "2600:1f1e:2f:652d:21b7:8d2c:78a1:afcf", port 5432 failed: ERROR:  Project name ('npg_skecwsr0v02h0ep-falling-sound-ac1dhi5g-pooler') must contain only alphanumeric characters and hyphen.
+)
+
+Information for: ActiveRecord::ConnectionNotEstablished (connection to server at "2600:1f1e:2f:652d:21b7:8d2c:78a1:afcf", port 5432 failed: ERROR:  Project name ('npg_skecwsr0v02h0ep-falling-sound-ac1dhi5g-pooler') must contain only alphanumeric characters and hyphen.
+):
+  
+activerecord (8.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:69:in 'ActiveRecord::ConnectionAdapters::PostgreSQLAdapter.new_client'
+activerecord (8.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:939:in 'ActiveRecord::ConnectionAdapters::PostgreSQLAdapter#connect'
+activerecord (8.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:951:in 'ActiveRecord::ConnectionAdapters::PostgreSQLAdapter#reconnect'
+activerecord (8.0.2) lib/active_record/connection_adapters/abstract_adapter.rb:667:in 'block in ActiveRecord::ConnectionAdapters::AbstractAdapter#reconnect!'
+activesupport (8.0.2) lib/active_support/concurrency/null_lock.rb:9:in 'ActiveSupport::Concurrency::NullLock#synchronize'
+activerecord (8.0.2) lib/active_record/connection_adapters/abstract_adapter.rb:666:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#reconnect!'
+activerecord (8.0.2) lib/active_record/connection_adapters/abstract_adapter.rb:771:in 'block in ActiveRecord::ConnectionAdapters::AbstractAdapter#verify!'
+activesupport (8.0.2) lib/active_support/concurrency/null_lock.rb:9:in 'ActiveSupport::Concurrency::NullLock#synchronize'
+activerecord (8.0.2) lib/active_record/connection_adapters/abstract_adapter.rb:761:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#verify!'
+activerecord (8.0.2) lib/active_record/connection_adapters/abstract_adapter.rb:779:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#connect!'
+activerecord (8.0.2) lib/active_record/connection_adapters/abstract_adapter.rb:985:in 'block in ActiveRecord::ConnectionAdapters::AbstractAdapter#with_raw_connection'
+activesupport (8.0.2) lib/active_support/concurrency/null_lock.rb:9:in 'ActiveSupport::Concurrency::NullLock#synchronize'
+activerecord (8.0.2) lib/active_record/connection_adapters/abstract_adapter.rb:984:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#with_raw_connection'
+activerecord (8.0.2) lib/active_record/connection_adapters/postgresql/quoting.rb:128:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::Quoting#quote_string'
+activerecord (8.0.2) lib/active_record/connection_adapters/abstract/quoting.rb:76:in 'ActiveRecord::ConnectionAdapters::Quoting#quote'
+activerecord (8.0.2) lib/active_record/connection_adapters/postgresql/quoting.rb:122:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::Quoting#quote'
+activerecord (8.0.2) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1142:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::SchemaStatements#quoted_scope'
+activerecord (8.0.2) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1119:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::SchemaStatements#data_source_sql'
+activerecord (8.0.2) lib/active_record/connection_adapters/abstract/schema_statements.rb:60:in 'ActiveRecord::ConnectionAdapters::SchemaStatements#table_exists?'
+activerecord (8.0.2) lib/active_record/schema_migration.rb:55:in 'block in ActiveRecord::SchemaMigration#create_table'
+activerecord (8.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:418:in 'ActiveRecord::ConnectionAdapters::ConnectionPool#with_connection'
+activerecord (8.0.2) lib/active_record/schema_migration.rb:54:in 'ActiveRecord::SchemaMigration#create_table'
+activerecord (8.0.2) lib/active_record/migration.rb:1431:in 'ActiveRecord::Migrator#initialize'
+activerecord (8.0.2) lib/active_record/migration.rb:1279:in 'Class#new'
+activerecord (8.0.2) lib/active_record/migration.rb:1279:in 'ActiveRecord::MigrationContext#open'
+activerecord (8.0.2) lib/active_record/migration.rb:763:in 'block (2 levels) in ActiveRecord::Migration.pending_migrations'
+activerecord (8.0.2) lib/active_record/migration/pending_migration_connection.rb:8:in 'ActiveRecord::PendingMigrationConnection.with_temporary_pool'
+activerecord (8.0.2) lib/active_record/migration.rb:762:in 'block in ActiveRecord::Migration.pending_migrations'
+activerecord (8.0.2) lib/active_record/migration.rb:761:in 'Array#each'
+activerecord (8.0.2) lib/active_record/migration.rb:761:in 'ActiveRecord::Migration.pending_migrations'
+activerecord (8.0.2) lib/active_record/migration.rb:740:in 'ActiveRecord::Migration.check_pending_migrations'
+activerecord (8.0.2) lib/active_record/migration.rb:660:in 'block (2 levels) in ActiveRecord::Migration::CheckPending#call'
+activesupport (8.0.2) lib/active_support/file_update_checker.rb:85:in 'ActiveSupport::FileUpdateChecker#execute'
+activerecord (8.0.2) lib/active_record/migration.rb:665:in 'block in ActiveRecord::Migration::CheckPending#call'
+activerecord (8.0.2) lib/active_record/migration.rb:657:in 'Thread::Mutex#synchronize'
+activerecord (8.0.2) lib/active_record/migration.rb:657:in 'ActiveRecord::Migration::CheckPending#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:31:in 'block in ActionDispatch::Callbacks#call'
+activesupport (8.0.2) lib/active_support/callbacks.rb:100:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:30:in 'ActionDispatch::Callbacks#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (8.0.2) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (8.0.2) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/remote_ip.rb:96:in 'ActionDispatch::RemoteIp#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/request_id.rb:34:in 'ActionDispatch::RequestId#call'
+rack (3.1.16) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:61:in 'block in ActionDispatch::ServerTiming#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:26:in 'ActionDispatch::ServerTiming::Subscriber#collect_events'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:60:in 'ActionDispatch::ServerTiming#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.1.16) lib/rack/sendfile.rb:114:in 'Rack::Sendfile#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/host_authorization.rb:143:in 'ActionDispatch::HostAuthorization#call'
+railties (8.0.2) lib/rails/engine.rb:535:in 'Rails::Engine#call'
+puma (6.6.0) lib/puma/configuration.rb:279:in 'Puma::Configuration::ConfigMiddleware#call'
+puma (6.6.0) lib/puma/request.rb:99:in 'block in Puma::Request#handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in 'Puma::ThreadPool#with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in 'Puma::Request#handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in 'Puma::Server#process_client'
+puma (6.6.0) lib/puma/server.rb:254:in 'block in Puma::Server#run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in 'block in Puma::ThreadPool#spawn_thread'
+
+Information for cause: PG::ConnectionBad (connection to server at "2600:1f1e:2f:652d:21b7:8d2c:78a1:afcf", port 5432 failed: ERROR:  Project name ('npg_skecwsr0v02h0ep-falling-sound-ac1dhi5g-pooler') must contain only alphanumeric characters and hyphen.
+):
+  
+pg (1.5.9) lib/pg/connection.rb:709:in 'PG::Connection#async_connect_or_reset'
+pg (1.5.9) lib/pg/connection.rb:844:in 'PG::Connection.connect_to_hosts'
+pg (1.5.9) lib/pg/connection.rb:772:in 'PG::Connection.new'
+pg (1.5.9) lib/pg.rb:63:in 'PG.connect'
+activerecord (8.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:58:in 'ActiveRecord::ConnectionAdapters::PostgreSQLAdapter.new_client'
+activerecord (8.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:939:in 'ActiveRecord::ConnectionAdapters::PostgreSQLAdapter#connect'
+activerecord (8.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:951:in 'ActiveRecord::ConnectionAdapters::PostgreSQLAdapter#reconnect'
+activerecord (8.0.2) lib/active_record/connection_adapters/abstract_adapter.rb:667:in 'block in ActiveRecord::ConnectionAdapters::AbstractAdapter#reconnect!'
+activesupport (8.0.2) lib/active_support/concurrency/null_lock.rb:9:in 'ActiveSupport::Concurrency::NullLock#synchronize'
+activerecord (8.0.2) lib/active_record/connection_adapters/abstract_adapter.rb:666:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#reconnect!'
+activerecord (8.0.2) lib/active_record/connection_adapters/abstract_adapter.rb:771:in 'block in ActiveRecord::ConnectionAdapters::AbstractAdapter#verify!'
+activesupport (8.0.2) lib/active_support/concurrency/null_lock.rb:9:in 'ActiveSupport::Concurrency::NullLock#synchronize'
+activerecord (8.0.2) lib/active_record/connection_adapters/abstract_adapter.rb:761:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#verify!'
+activerecord (8.0.2) lib/active_record/connection_adapters/abstract_adapter.rb:779:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#connect!'
+activerecord (8.0.2) lib/active_record/connection_adapters/abstract_adapter.rb:985:in 'block in ActiveRecord::ConnectionAdapters::AbstractAdapter#with_raw_connection'
+activesupport (8.0.2) lib/active_support/concurrency/null_lock.rb:9:in 'ActiveSupport::Concurrency::NullLock#synchronize'
+activerecord (8.0.2) lib/active_record/connection_adapters/abstract_adapter.rb:984:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#with_raw_connection'
+activerecord (8.0.2) lib/active_record/connection_adapters/postgresql/quoting.rb:128:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::Quoting#quote_string'
+activerecord (8.0.2) lib/active_record/connection_adapters/abstract/quoting.rb:76:in 'ActiveRecord::ConnectionAdapters::Quoting#quote'
+activerecord (8.0.2) lib/active_record/connection_adapters/postgresql/quoting.rb:122:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::Quoting#quote'
+activerecord (8.0.2) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1142:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::SchemaStatements#quoted_scope'
+activerecord (8.0.2) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1119:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::SchemaStatements#data_source_sql'
+activerecord (8.0.2) lib/active_record/connection_adapters/abstract/schema_statements.rb:60:in 'ActiveRecord::ConnectionAdapters::SchemaStatements#table_exists?'
+activerecord (8.0.2) lib/active_record/schema_migration.rb:55:in 'block in ActiveRecord::SchemaMigration#create_table'
+activerecord (8.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:418:in 'ActiveRecord::ConnectionAdapters::ConnectionPool#with_connection'
+activerecord (8.0.2) lib/active_record/schema_migration.rb:54:in 'ActiveRecord::SchemaMigration#create_table'
+activerecord (8.0.2) lib/active_record/migration.rb:1431:in 'ActiveRecord::Migrator#initialize'
+activerecord (8.0.2) lib/active_record/migration.rb:1279:in 'Class#new'
+activerecord (8.0.2) lib/active_record/migration.rb:1279:in 'ActiveRecord::MigrationContext#open'
+activerecord (8.0.2) lib/active_record/migration.rb:763:in 'block (2 levels) in ActiveRecord::Migration.pending_migrations'
+activerecord (8.0.2) lib/active_record/migration/pending_migration_connection.rb:8:in 'ActiveRecord::PendingMigrationConnection.with_temporary_pool'
+activerecord (8.0.2) lib/active_record/migration.rb:762:in 'block in ActiveRecord::Migration.pending_migrations'
+activerecord (8.0.2) lib/active_record/migration.rb:761:in 'Array#each'
+activerecord (8.0.2) lib/active_record/migration.rb:761:in 'ActiveRecord::Migration.pending_migrations'
+activerecord (8.0.2) lib/active_record/migration.rb:740:in 'ActiveRecord::Migration.check_pending_migrations'
+activerecord (8.0.2) lib/active_record/migration.rb:660:in 'block (2 levels) in ActiveRecord::Migration::CheckPending#call'
+activesupport (8.0.2) lib/active_support/file_update_checker.rb:85:in 'ActiveSupport::FileUpdateChecker#execute'
+activerecord (8.0.2) lib/active_record/migration.rb:665:in 'block in ActiveRecord::Migration::CheckPending#call'
+activerecord (8.0.2) lib/active_record/migration.rb:657:in 'Thread::Mutex#synchronize'
+activerecord (8.0.2) lib/active_record/migration.rb:657:in 'ActiveRecord::Migration::CheckPending#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:31:in 'block in ActionDispatch::Callbacks#call'
+activesupport (8.0.2) lib/active_support/callbacks.rb:100:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:30:in 'ActionDispatch::Callbacks#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (8.0.2) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (8.0.2) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/remote_ip.rb:96:in 'ActionDispatch::RemoteIp#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/request_id.rb:34:in 'ActionDispatch::RequestId#call'
+rack (3.1.16) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:61:in 'block in ActionDispatch::ServerTiming#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:26:in 'ActionDispatch::ServerTiming::Subscriber#collect_events'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:60:in 'ActionDispatch::ServerTiming#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.1.16) lib/rack/sendfile.rb:114:in 'Rack::Sendfile#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/host_authorization.rb:143:in 'ActionDispatch::HostAuthorization#call'
+railties (8.0.2) lib/rails/engine.rb:535:in 'Rails::Engine#call'
+puma (6.6.0) lib/puma/configuration.rb:279:in 'Puma::Configuration::ConfigMiddleware#call'
+puma (6.6.0) lib/puma/request.rb:99:in 'block in Puma::Request#handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in 'Puma::ThreadPool#with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in 'Puma::Request#handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in 'Puma::Server#process_client'
+puma (6.6.0) lib/puma/server.rb:254:in 'block in Puma::Server#run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in 'block in Puma::ThreadPool#spawn_thread'
+Started GET "/team_tasks/" for ::1 at 2025-07-19 21:50:28 -0300
+  [1m[35m (122.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY) /*application='TeamRuby'*/[0m
+  [1m[35m (90.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='TeamRuby'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (83.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='TeamRuby'*/[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 1 pending migration:
+
+db/migrate/20250720004257_create_team_tasks.rb
+
+
+):
+  
+activerecord (8.0.2) lib/active_record/migration.rb:743:in 'ActiveRecord::Migration.check_pending_migrations'
+activerecord (8.0.2) lib/active_record/migration.rb:660:in 'block (2 levels) in ActiveRecord::Migration::CheckPending#call'
+activesupport (8.0.2) lib/active_support/file_update_checker.rb:85:in 'ActiveSupport::FileUpdateChecker#execute'
+activerecord (8.0.2) lib/active_record/migration.rb:665:in 'block in ActiveRecord::Migration::CheckPending#call'
+activerecord (8.0.2) lib/active_record/migration.rb:657:in 'Thread::Mutex#synchronize'
+activerecord (8.0.2) lib/active_record/migration.rb:657:in 'ActiveRecord::Migration::CheckPending#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:31:in 'block in ActionDispatch::Callbacks#call'
+activesupport (8.0.2) lib/active_support/callbacks.rb:100:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:30:in 'ActionDispatch::Callbacks#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (8.0.2) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (8.0.2) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/remote_ip.rb:96:in 'ActionDispatch::RemoteIp#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/request_id.rb:34:in 'ActionDispatch::RequestId#call'
+rack (3.1.16) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:61:in 'block in ActionDispatch::ServerTiming#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:26:in 'ActionDispatch::ServerTiming::Subscriber#collect_events'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:60:in 'ActionDispatch::ServerTiming#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.1.16) lib/rack/sendfile.rb:114:in 'Rack::Sendfile#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/host_authorization.rb:143:in 'ActionDispatch::HostAuthorization#call'
+railties (8.0.2) lib/rails/engine.rb:535:in 'Rails::Engine#call'
+puma (6.6.0) lib/puma/configuration.rb:279:in 'Puma::Configuration::ConfigMiddleware#call'
+puma (6.6.0) lib/puma/request.rb:99:in 'block in Puma::Request#handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in 'Puma::ThreadPool#with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in 'Puma::Request#handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in 'Puma::Server#process_client'
+puma (6.6.0) lib/puma/server.rb:254:in 'block in Puma::Server#run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in 'block in Puma::ThreadPool#spawn_thread'
+Started GET "/team_tasks/" for ::1 at 2025-07-19 21:50:34 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (77.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='TeamRuby'*/[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 1 pending migration:
+
+db/migrate/20250720004257_create_team_tasks.rb
+
+
+):
+  
+activerecord (8.0.2) lib/active_record/migration.rb:743:in 'ActiveRecord::Migration.check_pending_migrations'
+activerecord (8.0.2) lib/active_record/migration.rb:660:in 'block (2 levels) in ActiveRecord::Migration::CheckPending#call'
+activesupport (8.0.2) lib/active_support/file_update_checker.rb:85:in 'ActiveSupport::FileUpdateChecker#execute'
+activerecord (8.0.2) lib/active_record/migration.rb:665:in 'block in ActiveRecord::Migration::CheckPending#call'
+activerecord (8.0.2) lib/active_record/migration.rb:657:in 'Thread::Mutex#synchronize'
+activerecord (8.0.2) lib/active_record/migration.rb:657:in 'ActiveRecord::Migration::CheckPending#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:31:in 'block in ActionDispatch::Callbacks#call'
+activesupport (8.0.2) lib/active_support/callbacks.rb:100:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:30:in 'ActionDispatch::Callbacks#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (8.0.2) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (8.0.2) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/remote_ip.rb:96:in 'ActionDispatch::RemoteIp#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/request_id.rb:34:in 'ActionDispatch::RequestId#call'
+rack (3.1.16) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:61:in 'block in ActionDispatch::ServerTiming#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:26:in 'ActionDispatch::ServerTiming::Subscriber#collect_events'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:60:in 'ActionDispatch::ServerTiming#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.1.16) lib/rack/sendfile.rb:114:in 'Rack::Sendfile#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/host_authorization.rb:143:in 'ActionDispatch::HostAuthorization#call'
+railties (8.0.2) lib/rails/engine.rb:535:in 'Rails::Engine#call'
+puma (6.6.0) lib/puma/configuration.rb:279:in 'Puma::Configuration::ConfigMiddleware#call'
+puma (6.6.0) lib/puma/request.rb:99:in 'block in Puma::Request#handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in 'Puma::ThreadPool#with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in 'Puma::Request#handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in 'Puma::Server#process_client'
+puma (6.6.0) lib/puma/server.rb:254:in 'block in Puma::Server#run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in 'block in Puma::ThreadPool#spawn_thread'
+Started GET "/team_tasks/" for ::1 at 2025-07-19 21:56:16 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (84.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='TeamRuby'*/[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 1 pending migration:
+
+db/migrate/20250720004257_create_team_tasks.rb
+
+
+):
+  
+activerecord (8.0.2) lib/active_record/migration.rb:743:in 'ActiveRecord::Migration.check_pending_migrations'
+activerecord (8.0.2) lib/active_record/migration.rb:660:in 'block (2 levels) in ActiveRecord::Migration::CheckPending#call'
+activesupport (8.0.2) lib/active_support/file_update_checker.rb:85:in 'ActiveSupport::FileUpdateChecker#execute'
+activerecord (8.0.2) lib/active_record/migration.rb:665:in 'block in ActiveRecord::Migration::CheckPending#call'
+activerecord (8.0.2) lib/active_record/migration.rb:657:in 'Thread::Mutex#synchronize'
+activerecord (8.0.2) lib/active_record/migration.rb:657:in 'ActiveRecord::Migration::CheckPending#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:31:in 'block in ActionDispatch::Callbacks#call'
+activesupport (8.0.2) lib/active_support/callbacks.rb:100:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:30:in 'ActionDispatch::Callbacks#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (8.0.2) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (8.0.2) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/remote_ip.rb:96:in 'ActionDispatch::RemoteIp#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/request_id.rb:34:in 'ActionDispatch::RequestId#call'
+rack (3.1.16) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:61:in 'block in ActionDispatch::ServerTiming#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:26:in 'ActionDispatch::ServerTiming::Subscriber#collect_events'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:60:in 'ActionDispatch::ServerTiming#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.1.16) lib/rack/sendfile.rb:114:in 'Rack::Sendfile#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/host_authorization.rb:143:in 'ActionDispatch::HostAuthorization#call'
+railties (8.0.2) lib/rails/engine.rb:535:in 'Rails::Engine#call'
+puma (6.6.0) lib/puma/configuration.rb:279:in 'Puma::Configuration::ConfigMiddleware#call'
+puma (6.6.0) lib/puma/request.rb:99:in 'block in Puma::Request#handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in 'Puma::ThreadPool#with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in 'Puma::Request#handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in 'Puma::Server#process_client'
+puma (6.6.0) lib/puma/server.rb:254:in 'block in Puma::Server#run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in 'block in Puma::ThreadPool#spawn_thread'
+Started GET "/team_tasks/" for ::1 at 2025-07-19 21:57:31 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (78.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='TeamRuby'*/[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 1 pending migration:
+
+db/migrate/20250720004257_create_team_tasks.rb
+
+
+):
+  
+activerecord (8.0.2) lib/active_record/migration.rb:743:in 'ActiveRecord::Migration.check_pending_migrations'
+activerecord (8.0.2) lib/active_record/migration.rb:660:in 'block (2 levels) in ActiveRecord::Migration::CheckPending#call'
+activesupport (8.0.2) lib/active_support/file_update_checker.rb:85:in 'ActiveSupport::FileUpdateChecker#execute'
+activerecord (8.0.2) lib/active_record/migration.rb:665:in 'block in ActiveRecord::Migration::CheckPending#call'
+activerecord (8.0.2) lib/active_record/migration.rb:657:in 'Thread::Mutex#synchronize'
+activerecord (8.0.2) lib/active_record/migration.rb:657:in 'ActiveRecord::Migration::CheckPending#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:31:in 'block in ActionDispatch::Callbacks#call'
+activesupport (8.0.2) lib/active_support/callbacks.rb:100:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:30:in 'ActionDispatch::Callbacks#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (8.0.2) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (8.0.2) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/remote_ip.rb:96:in 'ActionDispatch::RemoteIp#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/request_id.rb:34:in 'ActionDispatch::RequestId#call'
+rack (3.1.16) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:61:in 'block in ActionDispatch::ServerTiming#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:26:in 'ActionDispatch::ServerTiming::Subscriber#collect_events'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:60:in 'ActionDispatch::ServerTiming#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.1.16) lib/rack/sendfile.rb:114:in 'Rack::Sendfile#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/host_authorization.rb:143:in 'ActionDispatch::HostAuthorization#call'
+railties (8.0.2) lib/rails/engine.rb:535:in 'Rails::Engine#call'
+puma (6.6.0) lib/puma/configuration.rb:279:in 'Puma::Configuration::ConfigMiddleware#call'
+puma (6.6.0) lib/puma/request.rb:99:in 'block in Puma::Request#handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in 'Puma::ThreadPool#with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in 'Puma::Request#handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in 'Puma::Server#process_client'
+puma (6.6.0) lib/puma/server.rb:254:in 'block in Puma::Server#run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in 'block in Puma::ThreadPool#spawn_thread'
+  [1m[35m (79.9ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2818499705813938860) /*application='TeamRuby'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (78.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='TeamRuby'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (84.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='TeamRuby'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (82.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-07-20 00:58:00.172231', '2025-07-20 00:58:00.172234') RETURNING "key" /*application='TeamRuby'*/[0m
+Migrating to CreateTeamTasks (20250720004257)
+  [1m[36mTRANSACTION (76.0ms)[0m  [1m[35mBEGIN /*application='TeamRuby'*/[0m
+  [1m[35m (117.4ms)[0m  [1m[35mCREATE TABLE "team_tasks" ("id" bigserial primary key, "title" character varying, "description" text, "status" character varying, "assigned_to" character varying, "due_date" date, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='TeamRuby'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (80.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250720004257') RETURNING "version" /*application='TeamRuby'*/[0m
+  [1m[36mTRANSACTION (76.0ms)[0m  [1m[35mCOMMIT /*application='TeamRuby'*/[0m
+  [1m[35m (79.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2818499705813938860) /*application='TeamRuby'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (80.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='TeamRuby'*/[0m
+Started GET "/team_tasks/" for ::1 at 2025-07-19 21:58:13 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (85.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='TeamRuby'*/[0m
+Processing by TeamTasksController#index as */*
+  [1m[36mTeamTask Load (1407.8ms)[0m  [1m[34mSELECT "team_tasks".* FROM "team_tasks" /*action='index',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:8:in 'TeamTasksController#index'
+Completed 200 OK in 1496ms (Views: -665.7ms | ActiveRecord: 2076.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/team_tasks/" for ::1 at 2025-07-19 22:02:25 -0300
+Processing by TeamTasksController#create as */*
+  Parameters: {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-20-07", "team_task" => {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-20-07"}}
+  [1m[36mTRANSACTION (84.2ms)[0m  [1m[35mBEGIN /*action='create',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:20:in 'TeamTasksController#create'
+  [1m[36mTeamTask Create (170.2ms)[0m  [1m[32mINSERT INTO "team_tasks" ("title", "description", "status", "assigned_to", "due_date", "created_at", "updated_at") VALUES ('Criar documentação do Projeto', 'Escrever e detalhar todas as etapas de construção do projeto da Softex', 'Entregue', 'Luiz Gustavo', NULL, '2025-07-20 01:02:25.589417', '2025-07-20 01:02:25.589417') RETURNING "id" /*action='create',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:20:in 'TeamTasksController#create'
+  [1m[36mTRANSACTION (84.2ms)[0m  [1m[35mCOMMIT /*action='create',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:20:in 'TeamTasksController#create'
+Completed 201 Created in 352ms (Views: 0.7ms | ActiveRecord: 759.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/team_tasks/" for ::1 at 2025-07-19 22:02:30 -0300
+Processing by TeamTasksController#index as */*
+  Parameters: {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-20-07", "team_task" => {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-20-07"}}
+  [1m[36mTeamTask Load (85.6ms)[0m  [1m[34mSELECT "team_tasks".* FROM "team_tasks" /*action='index',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:8:in 'TeamTasksController#index'
+Completed 200 OK in 89ms (Views: 2.9ms | ActiveRecord: 85.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PUT "/team_tasks/1" for ::1 at 2025-07-19 22:03:22 -0300
+Error occurred while parsing request parameters.
+Contents:
+
+{
+  "title": "Criar documentação do Projeto",
+  "description": "Escrever e detalhar todas as etapas de construção do projeto da Softex",
+  "status": "Entregue",
+  "assigned_to":"Luiz Gustavo",
+  "due_date": 2025-20-07
+  }
+Processing by TeamTasksController#update as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters)
+Caused by: JSON::ParserError (expected ',' or '}' after object value, got: '-20-07' at line 5 column 19)
+
+Information for: ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters):
+  
+app/controllers/team_tasks_controller.rb:44:in 'TeamTasksController#set_team_task'
+
+Information for cause: JSON::ParserError (expected ',' or '}' after object value, got: '-20-07' at line 5 column 19):
+  
+app/controllers/team_tasks_controller.rb:44:in 'TeamTasksController#set_team_task'
+Started PUT "/team_tasks/1" for ::1 at 2025-07-19 22:04:42 -0300
+Processing by TeamTasksController#update as */*
+  Parameters: {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-20", "id" => "1", "team_task" => {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-20"}}
+  [1m[36mTeamTask Load (175.3ms)[0m  [1m[34mSELECT "team_tasks".* FROM "team_tasks" WHERE "team_tasks"."id" = 1 LIMIT 1 /*action='update',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:44:in 'TeamTasksController#set_team_task'
+  [1m[36mTRANSACTION (78.8ms)[0m  [1m[35mBEGIN /*action='update',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:29:in 'TeamTasksController#update'
+  [1m[36mTeamTask Update (168.7ms)[0m  [1m[33mUPDATE "team_tasks" SET "due_date" = '2025-07-20', "updated_at" = '2025-07-20 01:04:42.398029' WHERE "team_tasks"."id" = 1 /*action='update',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:29:in 'TeamTasksController#update'
+  [1m[36mTRANSACTION (84.7ms)[0m  [1m[35mCOMMIT /*action='update',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:29:in 'TeamTasksController#update'
+Completed 200 OK in 529ms (Views: 0.4ms | ActiveRecord: 507.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started PUT "/team_tasks/1" for ::1 at 2025-07-19 22:04:43 -0300
+Processing by TeamTasksController#update as */*
+  Parameters: {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-20", "id" => "1", "team_task" => {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-20"}}
+  [1m[36mTeamTask Load (84.4ms)[0m  [1m[34mSELECT "team_tasks".* FROM "team_tasks" WHERE "team_tasks"."id" = 1 LIMIT 1 /*action='update',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:44:in 'TeamTasksController#set_team_task'
+Completed 200 OK in 87ms (Views: 0.3ms | ActiveRecord: 84.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/team_tasks/" for ::1 at 2025-07-19 22:04:51 -0300
+Processing by TeamTasksController#index as */*
+  Parameters: {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-20", "team_task" => {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-20"}}
+  [1m[36mTeamTask Load (90.4ms)[0m  [1m[34mSELECT "team_tasks".* FROM "team_tasks" /*action='index',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:8:in 'TeamTasksController#index'
+Completed 200 OK in 93ms (Views: 2.4ms | ActiveRecord: 90.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/team_tasks/" for ::1 at 2025-07-19 22:04:52 -0300
+Processing by TeamTasksController#index as */*
+  Parameters: {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-20", "team_task" => {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-20"}}
+  [1m[36mTeamTask Load (88.6ms)[0m  [1m[34mSELECT "team_tasks".* FROM "team_tasks" /*action='index',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:8:in 'TeamTasksController#index'
+Completed 200 OK in 92ms (Views: 3.3ms | ActiveRecord: 88.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  [1m[35m (84.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2818499705813938860) /*application='TeamRuby'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (84.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='TeamRuby'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (82.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='TeamRuby'*/[0m
+  [1m[35m (82.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(2818499705813938860) /*application='TeamRuby'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (83.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='TeamRuby'*/[0m
+  [1m[35m (80.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2818499705813938860) /*application='TeamRuby'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (84.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='TeamRuby'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (79.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='TeamRuby'*/[0m
+  [1m[35m (79.0ms)[0m  [1m[34mSELECT pg_advisory_unlock(2818499705813938860) /*application='TeamRuby'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (82.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='TeamRuby'*/[0m
+Started GET "/team_tasks/" for ::1 at 2025-07-19 22:07:16 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (80.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='TeamRuby'*/[0m
+Processing by TeamTasksController#index as */*
+  [1m[36mTeamTask Load (1401.2ms)[0m  [1m[34mSELECT "team_tasks".* FROM "team_tasks" /*action='index',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:8:in 'TeamTasksController#index'
+Completed 200 OK in 1771ms (Views: -646.6ms | ActiveRecord: 2390.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/team_tasks/" for ::1 at 2025-07-19 22:08:11 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (79.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='TeamRuby'*/[0m
+Processing by TeamTasksController#index as */*
+  [1m[36mTeamTask Load (1413.1ms)[0m  [1m[34mSELECT "team_tasks".* FROM "team_tasks" /*action='index',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:8:in 'TeamTasksController#index'
+Completed 200 OK in 1786ms (Views: -663.3ms | ActiveRecord: 2421.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/team_tasks/" for ::1 at 2025-07-19 22:09:56 -0300
+Processing by TeamTasksController#create as */*
+  Parameters: {"title" => "Reunião com Luciano", "description" => "Reunião de Lideres do projeto da softex", "status" => "Pendente", "assigned_to" => "Dilson Albuquerque", "due_date" => "2025-07-21", "team_task" => {"title" => "Reunião com Luciano", "description" => "Reunião de Lideres do projeto da softex", "status" => "Pendente", "assigned_to" => "Dilson Albuquerque", "due_date" => "2025-07-21"}}
+  [1m[36mTRANSACTION (86.6ms)[0m  [1m[35mBEGIN /*action='create',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:20:in 'TeamTasksController#create'
+  [1m[36mTeamTask Create (173.0ms)[0m  [1m[32mINSERT INTO "team_tasks" ("title", "description", "status", "assigned_to", "due_date", "created_at", "updated_at") VALUES ('Reunião com Luciano', 'Reunião de Lideres do projeto da softex', 'Pendente', 'Dilson Albuquerque', '2025-07-21', '2025-07-20 01:09:56.168501', '2025-07-20 01:09:56.168501') RETURNING "id" /*action='create',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:20:in 'TeamTasksController#create'
+  [1m[36mTRANSACTION (89.7ms)[0m  [1m[35mCOMMIT /*action='create',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:20:in 'TeamTasksController#create'
+Completed 201 Created in 268ms (Views: 0.5ms | ActiveRecord: 349.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/team_tasks/" for ::1 at 2025-07-19 22:09:59 -0300
+Processing by TeamTasksController#index as */*
+  Parameters: {"title" => "Reunião com Luciano", "description" => "Reunião de Lideres do projeto da softex", "status" => "Pendente", "assigned_to" => "Dilson Albuquerque", "due_date" => "2025-07-21", "team_task" => {"title" => "Reunião com Luciano", "description" => "Reunião de Lideres do projeto da softex", "status" => "Pendente", "assigned_to" => "Dilson Albuquerque", "due_date" => "2025-07-21"}}
+  [1m[36mTeamTask Load (86.3ms)[0m  [1m[34mSELECT "team_tasks".* FROM "team_tasks" /*action='index',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:8:in 'TeamTasksController#index'
+Completed 200 OK in 89ms (Views: 2.8ms | ActiveRecord: 86.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/team_tasks/" for ::1 at 2025-07-19 22:10:03 -0300
+Processing by TeamTasksController#index as */*
+  Parameters: {"title" => "Reunião com Luciano", "description" => "Reunião de Lideres do projeto da softex", "status" => "Pendente", "assigned_to" => "Dilson Albuquerque", "due_date" => "2025-07-21", "team_task" => {"title" => "Reunião com Luciano", "description" => "Reunião de Lideres do projeto da softex", "status" => "Pendente", "assigned_to" => "Dilson Albuquerque", "due_date" => "2025-07-21"}}
+  [1m[36mTeamTask Load (87.6ms)[0m  [1m[34mSELECT "team_tasks".* FROM "team_tasks" /*action='index',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:8:in 'TeamTasksController#index'
+Completed 200 OK in 91ms (Views: 3.5ms | ActiveRecord: 87.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/team_tasks/" for ::1 at 2025-07-19 22:10:04 -0300
+Processing by TeamTasksController#index as */*
+  Parameters: {"title" => "Reunião com Luciano", "description" => "Reunião de Lideres do projeto da softex", "status" => "Pendente", "assigned_to" => "Dilson Albuquerque", "due_date" => "2025-07-21", "team_task" => {"title" => "Reunião com Luciano", "description" => "Reunião de Lideres do projeto da softex", "status" => "Pendente", "assigned_to" => "Dilson Albuquerque", "due_date" => "2025-07-21"}}
+  [1m[36mTeamTask Load (79.0ms)[0m  [1m[34mSELECT "team_tasks".* FROM "team_tasks" /*action='index',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:8:in 'TeamTasksController#index'
+Completed 200 OK in 82ms (Views: 3.0ms | ActiveRecord: 79.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/team_tasks/" for ::1 at 2025-07-19 22:10:15 -0300
+Processing by TeamTasksController#create as */*
+  Parameters: {"title" => "Reunião com Luciano", "description" => "Reunião de Lideres do projeto da softex", "status" => "Pendente", "assigned_to" => "Dilson Albuquerque", "due_date" => "2025-07-21", "team_task" => {"title" => "Reunião com Luciano", "description" => "Reunião de Lideres do projeto da softex", "status" => "Pendente", "assigned_to" => "Dilson Albuquerque", "due_date" => "2025-07-21"}}
+  [1m[36mTRANSACTION (83.4ms)[0m  [1m[35mBEGIN /*action='create',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:20:in 'TeamTasksController#create'
+  [1m[36mTeamTask Create (162.1ms)[0m  [1m[32mINSERT INTO "team_tasks" ("title", "description", "status", "assigned_to", "due_date", "created_at", "updated_at") VALUES ('Reunião com Luciano', 'Reunião de Lideres do projeto da softex', 'Pendente', 'Dilson Albuquerque', '2025-07-21', '2025-07-20 01:10:15.316837', '2025-07-20 01:10:15.316837') RETURNING "id" /*action='create',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:20:in 'TeamTasksController#create'
+  [1m[36mTRANSACTION (77.1ms)[0m  [1m[35mCOMMIT /*action='create',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:20:in 'TeamTasksController#create'
+Completed 201 Created in 244ms (Views: 0.5ms | ActiveRecord: 322.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/team_tasks/" for ::1 at 2025-07-19 22:10:19 -0300
+Processing by TeamTasksController#index as */*
+  Parameters: {"title" => "Reunião com Luciano", "description" => "Reunião de Lideres do projeto da softex", "status" => "Pendente", "assigned_to" => "Dilson Albuquerque", "due_date" => "2025-07-21", "team_task" => {"title" => "Reunião com Luciano", "description" => "Reunião de Lideres do projeto da softex", "status" => "Pendente", "assigned_to" => "Dilson Albuquerque", "due_date" => "2025-07-21"}}
+  [1m[36mTeamTask Load (87.2ms)[0m  [1m[34mSELECT "team_tasks".* FROM "team_tasks" /*action='index',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:8:in 'TeamTasksController#index'
+Completed 200 OK in 90ms (Views: 3.0ms | ActiveRecord: 87.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/team_tasks/2" for ::1 at 2025-07-19 22:10:54 -0300
+Processing by TeamTasksController#destroy as */*
+  Parameters: {"title" => "Reunião com Luciano", "description" => "Reunião de Lideres do projeto da softex", "status" => "Pendente", "assigned_to" => "Dilson Albuquerque", "due_date" => "2025-07-21", "id" => "2", "team_task" => {"title" => "Reunião com Luciano", "description" => "Reunião de Lideres do projeto da softex", "status" => "Pendente", "assigned_to" => "Dilson Albuquerque", "due_date" => "2025-07-21"}}
+  [1m[36mTeamTask Load (162.0ms)[0m  [1m[34mSELECT "team_tasks".* FROM "team_tasks" WHERE "team_tasks"."id" = 2 LIMIT 1 /*action='destroy',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:44:in 'TeamTasksController#set_team_task'
+  [1m[36mTRANSACTION (77.8ms)[0m  [1m[35mBEGIN /*action='destroy',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:38:in 'TeamTasksController#destroy'
+  [1m[36mTeamTask Destroy (166.3ms)[0m  [1m[31mDELETE FROM "team_tasks" WHERE "team_tasks"."id" = 2 /*action='destroy',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:38:in 'TeamTasksController#destroy'
+  [1m[36mTRANSACTION (79.1ms)[0m  [1m[35mCOMMIT /*action='destroy',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:38:in 'TeamTasksController#destroy'
+Completed 204 No Content in 514ms (ActiveRecord: 485.1ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/team_tasks/" for ::1 at 2025-07-19 22:10:59 -0300
+Processing by TeamTasksController#index as */*
+  Parameters: {"title" => "Reunião com Luciano", "description" => "Reunião de Lideres do projeto da softex", "status" => "Pendente", "assigned_to" => "Dilson Albuquerque", "due_date" => "2025-07-21", "team_task" => {"title" => "Reunião com Luciano", "description" => "Reunião de Lideres do projeto da softex", "status" => "Pendente", "assigned_to" => "Dilson Albuquerque", "due_date" => "2025-07-21"}}
+  [1m[36mTeamTask Load (84.0ms)[0m  [1m[34mSELECT "team_tasks".* FROM "team_tasks" /*action='index',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:8:in 'TeamTasksController#index'
+Completed 200 OK in 87ms (Views: 2.6ms | ActiveRecord: 84.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PUT "/team_tasks/3" for ::1 at 2025-07-19 22:11:43 -0300
+Processing by TeamTasksController#update as */*
+  Parameters: {"title" => "Reunião com Luciano", "description" => "Reunião de Lideres do projeto da softex", "status" => "Pendente", "assigned_to" => "Dilson Albuquerque", "due_date" => "2025-07-22", "id" => "3", "team_task" => {"title" => "Reunião com Luciano", "description" => "Reunião de Lideres do projeto da softex", "status" => "Pendente", "assigned_to" => "Dilson Albuquerque", "due_date" => "2025-07-22"}}
+  [1m[36mTeamTask Load (158.9ms)[0m  [1m[34mSELECT "team_tasks".* FROM "team_tasks" WHERE "team_tasks"."id" = 3 LIMIT 1 /*action='update',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:44:in 'TeamTasksController#set_team_task'
+  [1m[36mTRANSACTION (77.4ms)[0m  [1m[35mBEGIN /*action='update',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:29:in 'TeamTasksController#update'
+  [1m[36mTeamTask Update (157.5ms)[0m  [1m[33mUPDATE "team_tasks" SET "due_date" = '2025-07-22', "updated_at" = '2025-07-20 01:11:43.376183' WHERE "team_tasks"."id" = 3 /*action='update',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:29:in 'TeamTasksController#update'
+  [1m[36mTRANSACTION (79.3ms)[0m  [1m[35mCOMMIT /*action='update',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:29:in 'TeamTasksController#update'
+Completed 200 OK in 403ms (Views: 0.3ms | ActiveRecord: 473.0ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/team_tasks/" for ::1 at 2025-07-19 22:11:47 -0300
+Processing by TeamTasksController#index as */*
+  Parameters: {"title" => "Reunião com Luciano", "description" => "Reunião de Lideres do projeto da softex", "status" => "Pendente", "assigned_to" => "Dilson Albuquerque", "due_date" => "2025-07-22", "team_task" => {"title" => "Reunião com Luciano", "description" => "Reunião de Lideres do projeto da softex", "status" => "Pendente", "assigned_to" => "Dilson Albuquerque", "due_date" => "2025-07-22"}}
+  [1m[36mTeamTask Load (86.5ms)[0m  [1m[34mSELECT "team_tasks".* FROM "team_tasks" /*action='index',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:8:in 'TeamTasksController#index'
+Completed 200 OK in 90ms (Views: 3.1ms | ActiveRecord: 86.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/team_tasks/1" for ::1 at 2025-07-19 22:12:05 -0300
+Processing by TeamTasksController#show as */*
+  Parameters: {"title" => "Reunião com Luciano", "description" => "Reunião de Lideres do projeto da softex", "status" => "Pendente", "assigned_to" => "Dilson Albuquerque", "due_date" => "2025-07-22", "id" => "1", "team_task" => {"title" => "Reunião com Luciano", "description" => "Reunião de Lideres do projeto da softex", "status" => "Pendente", "assigned_to" => "Dilson Albuquerque", "due_date" => "2025-07-22"}}
+  [1m[36mTeamTask Load (162.5ms)[0m  [1m[34mSELECT "team_tasks".* FROM "team_tasks" WHERE "team_tasks"."id" = 1 LIMIT 1 /*action='show',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:44:in 'TeamTasksController#set_team_task'
+Completed 200 OK in 165ms (Views: 0.3ms | ActiveRecord: 162.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/team_tasks/3" for ::1 at 2025-07-19 22:12:10 -0300
+Processing by TeamTasksController#show as */*
+  Parameters: {"title" => "Reunião com Luciano", "description" => "Reunião de Lideres do projeto da softex", "status" => "Pendente", "assigned_to" => "Dilson Albuquerque", "due_date" => "2025-07-22", "id" => "3", "team_task" => {"title" => "Reunião com Luciano", "description" => "Reunião de Lideres do projeto da softex", "status" => "Pendente", "assigned_to" => "Dilson Albuquerque", "due_date" => "2025-07-22"}}
+  [1m[36mTeamTask Load (162.4ms)[0m  [1m[34mSELECT "team_tasks".* FROM "team_tasks" WHERE "team_tasks"."id" = 3 LIMIT 1 /*action='show',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:44:in 'TeamTasksController#set_team_task'
+Completed 200 OK in 166ms (Views: 0.3ms | ActiveRecord: 162.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/team_tasks/3" for ::1 at 2025-07-19 22:12:41 -0300
+  
+ActionController::RoutingError (No route matches [POST] "/team_tasks/3"):
+  
+Started GET "/team_tasks/" for ::1 at 2025-07-19 22:12:45 -0300
+Processing by TeamTasksController#index as */*
+  Parameters: {"description" => "Reunião de Lideres do projeto da softex", "status" => "Pendente", "assigned_to" => "Dilson Albuquerque", "due_date" => "2025-07-22", "team_task" => {"description" => "Reunião de Lideres do projeto da softex", "status" => "Pendente", "assigned_to" => "Dilson Albuquerque", "due_date" => "2025-07-22"}}
+  [1m[36mTeamTask Load (95.1ms)[0m  [1m[34mSELECT "team_tasks".* FROM "team_tasks" /*action='index',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:8:in 'TeamTasksController#index'
+Completed 200 OK in 99ms (Views: 3.2ms | ActiveRecord: 95.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  [1m[35m (96.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2818499705813938860) /*application='TeamRuby'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (88.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='TeamRuby'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (91.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='TeamRuby'*/[0m
+  [1m[35m (86.0ms)[0m  [1m[34mSELECT pg_advisory_unlock(2818499705813938860) /*application='TeamRuby'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (85.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='TeamRuby'*/[0m
+Started GET "/team_tasks/" for ::1 at 2025-07-19 22:20:26 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (82.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='TeamRuby'*/[0m
+  
+SyntaxError (C:/Users/Dilson/Desktop/Softex/gestao-de-tarefas-softex/team-ruby/app/controllers/team_tasks_controller.rb:64: syntax error found
+  [2m62 | [m    end
+  [2m63 | [m  end
+[1;31m> [m[2m64 | [mend
+  [2m   | [m[1;31m^~~[m unexpected 'end', ignoring it
+):
+  
+app/controllers/team_tasks_controller.rb:64: syntax error found
+Started GET "/team_tasks/" for ::1 at 2025-07-19 22:20:47 -0300
+Processing by TeamTasksController#index as */*
+  Parameters: {"description" => "Reunião de Lideres do projeto da softex", "status" => "Pendente", "assigned_to" => "Dilson Albuquerque", "due_date" => "2025-07-22", "team_task" => {"description" => "Reunião de Lideres do projeto da softex", "status" => "Pendente", "assigned_to" => "Dilson Albuquerque", "due_date" => "2025-07-22"}}
+  [1m[36mTeamTask Load (83.0ms)[0m  [1m[34mSELECT "team_tasks".* FROM "team_tasks" /*action='index',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:8:in 'TeamTasksController#index'
+Completed 200 OK in 202ms (Views: 16.0ms | ActiveRecord: 2398.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/team_tasks/" for ::1 at 2025-07-19 22:21:13 -0300
+Processing by TeamTasksController#create as */*
+  Parameters: {"description" => "Reunião de Lideres do projeto da softex", "status" => "Pendente", "assigned_to" => "Dilson Albuquerque", "team_task" => {"description" => "Reunião de Lideres do projeto da softex", "status" => "Pendente", "assigned_to" => "Dilson Albuquerque"}}
+Completed 422 Unprocessable Content in 64ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.2ms)
+
+
+Started POST "/team_tasks/" for ::1 at 2025-07-19 22:21:57 -0300
+Processing by TeamTasksController#create as */*
+  Parameters: {"description" => "Reunião de Lideres do projeto da softex", "assigned_to" => "Dilson Albuquerque", "team_task" => {"description" => "Reunião de Lideres do projeto da softex", "assigned_to" => "Dilson Albuquerque"}}
+Completed 422 Unprocessable Content in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/team_tasks/" for ::1 at 2025-07-19 22:22:16 -0300
+Error occurred while parsing request parameters.
+Contents:
+
+{
+"description":"Reunião de Lideres do projeto da softex",
+}
+Processing by TeamTasksController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters)
+Caused by: JSON::ParserError (expected object key, got: '}' at line 2 column 1)
+
+Information for: ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters):
+  
+app/controllers/team_tasks_controller.rb:52:in 'TeamTasksController#team_task_params'
+app/controllers/team_tasks_controller.rb:18:in 'TeamTasksController#create'
+
+Information for cause: JSON::ParserError (expected object key, got: '}' at line 2 column 1):
+  
+app/controllers/team_tasks_controller.rb:52:in 'TeamTasksController#team_task_params'
+app/controllers/team_tasks_controller.rb:18:in 'TeamTasksController#create'
+Started POST "/team_tasks/" for ::1 at 2025-07-19 22:22:23 -0300
+Processing by TeamTasksController#create as */*
+  Parameters: {"description" => "Reunião de Lideres do projeto da softex", "team_task" => {"description" => "Reunião de Lideres do projeto da softex"}}
+Completed 422 Unprocessable Content in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/team_tasks/" for ::1 at 2025-07-19 22:24:47 -0300
+Processing by TeamTasksController#create as */*
+  Parameters: {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-17", "team_task" => {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-17"}}
+  [1m[36mTRANSACTION (85.1ms)[0m  [1m[35mBEGIN /*action='create',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:20:in 'TeamTasksController#create'
+  [1m[36mTeamTask Create (179.4ms)[0m  [1m[32mINSERT INTO "team_tasks" ("title", "description", "status", "assigned_to", "due_date", "created_at", "updated_at") VALUES ('Criar documentação do Projeto', 'Escrever e detalhar todas as etapas de construção do projeto da Softex', 'Entregue', 'Luiz Gustavo', '2025-07-17', '2025-07-20 01:24:47.411593', '2025-07-20 01:24:47.411593') RETURNING "id" /*action='create',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:20:in 'TeamTasksController#create'
+  [1m[36mTRANSACTION (82.9ms)[0m  [1m[35mCOMMIT /*action='create',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:20:in 'TeamTasksController#create'
+Completed 201 Created in 268ms (Views: 0.3ms | ActiveRecord: 347.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/team_tasks/" for ::1 at 2025-07-19 22:24:52 -0300
+Processing by TeamTasksController#index as */*
+  Parameters: {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-17", "team_task" => {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-17"}}
+  [1m[36mTeamTask Load (87.1ms)[0m  [1m[34mSELECT "team_tasks".* FROM "team_tasks" /*action='index',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:8:in 'TeamTasksController#index'
+Completed 200 OK in 90ms (Views: 3.0ms | ActiveRecord: 87.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/team_tasks/1" for ::1 at 2025-07-19 22:25:03 -0300
+Processing by TeamTasksController#destroy as */*
+  Parameters: {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-17", "id" => "1", "team_task" => {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-17"}}
+  [1m[36mTeamTask Load (167.6ms)[0m  [1m[34mSELECT "team_tasks".* FROM "team_tasks" WHERE "team_tasks"."id" = 1 LIMIT 1 /*action='destroy',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:47:in 'TeamTasksController#set_team_task'
+  [1m[36mTRANSACTION (81.0ms)[0m  [1m[35mBEGIN /*action='destroy',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:41:in 'TeamTasksController#destroy'
+  [1m[36mTeamTask Destroy (164.5ms)[0m  [1m[31mDELETE FROM "team_tasks" WHERE "team_tasks"."id" = 1 /*action='destroy',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:41:in 'TeamTasksController#destroy'
+  [1m[36mTRANSACTION (82.5ms)[0m  [1m[35mCOMMIT /*action='destroy',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:41:in 'TeamTasksController#destroy'
+Completed 204 No Content in 515ms (ActiveRecord: 495.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/team_tasks/3" for ::1 at 2025-07-19 22:25:06 -0300
+Processing by TeamTasksController#destroy as */*
+  Parameters: {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-17", "id" => "3", "team_task" => {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-17"}}
+  [1m[36mTeamTask Load (94.3ms)[0m  [1m[34mSELECT "team_tasks".* FROM "team_tasks" WHERE "team_tasks"."id" = 3 LIMIT 1 /*action='destroy',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:47:in 'TeamTasksController#set_team_task'
+  [1m[36mTRANSACTION (80.6ms)[0m  [1m[35mBEGIN /*action='destroy',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:41:in 'TeamTasksController#destroy'
+  [1m[36mTeamTask Destroy (160.9ms)[0m  [1m[31mDELETE FROM "team_tasks" WHERE "team_tasks"."id" = 3 /*action='destroy',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:41:in 'TeamTasksController#destroy'
+  [1m[36mTRANSACTION (80.2ms)[0m  [1m[35mCOMMIT /*action='destroy',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:41:in 'TeamTasksController#destroy'
+Completed 204 No Content in 342ms (ActiveRecord: 415.9ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/team_tasks/4" for ::1 at 2025-07-19 22:25:08 -0300
+Processing by TeamTasksController#destroy as */*
+  Parameters: {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-17", "id" => "4", "team_task" => {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-17"}}
+  [1m[36mTeamTask Load (85.2ms)[0m  [1m[34mSELECT "team_tasks".* FROM "team_tasks" WHERE "team_tasks"."id" = 4 LIMIT 1 /*action='destroy',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:47:in 'TeamTasksController#set_team_task'
+  [1m[36mTRANSACTION (80.1ms)[0m  [1m[35mBEGIN /*action='destroy',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:41:in 'TeamTasksController#destroy'
+  [1m[36mTeamTask Destroy (164.2ms)[0m  [1m[31mDELETE FROM "team_tasks" WHERE "team_tasks"."id" = 4 /*action='destroy',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:41:in 'TeamTasksController#destroy'
+  [1m[36mTRANSACTION (78.7ms)[0m  [1m[35mCOMMIT /*action='destroy',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:41:in 'TeamTasksController#destroy'
+Completed 204 No Content in 335ms (ActiveRecord: 408.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/team_tasks/" for ::1 at 2025-07-19 22:25:14 -0300
+Processing by TeamTasksController#index as */*
+  [1m[36mTeamTask Load (86.9ms)[0m  [1m[34mSELECT "team_tasks".* FROM "team_tasks" /*action='index',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:8:in 'TeamTasksController#index'
+Completed 200 OK in 90ms (Views: 2.4ms | ActiveRecord: 86.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/team_tasks/" for ::1 at 2025-07-19 22:27:29 -0300
+Processing by TeamTasksController#index as */*
+  [1m[36mTeamTask Load (94.1ms)[0m  [1m[34mSELECT "team_tasks".* FROM "team_tasks" /*action='index',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:8:in 'TeamTasksController#index'
+Completed 200 OK in 115ms (Views: 2.7ms | ActiveRecord: 94.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/team_tasks/" for ::1 at 2025-07-19 22:31:05 -0300
+Processing by TeamTasksController#index as */*
+  [1m[36mTeamTask Load (90.3ms)[0m  [1m[34mSELECT "team_tasks".* FROM "team_tasks" /*action='index',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:8:in 'TeamTasksController#index'
+Completed 200 OK in 95ms (Views: 2.2ms | ActiveRecord: 90.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/team_tasks/" for ::1 at 2025-07-19 22:31:19 -0300
+Processing by TeamTasksController#create as */*
+  Parameters: {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-17", "team_task" => {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-17"}}
+Completed 422 Unprocessable Content in 101ms (Views: 0.1ms | ActiveRecord: 365.1ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/team_tasks/" for ::1 at 2025-07-19 22:32:00 -0300
+Processing by TeamTasksController#create as */*
+  Parameters: {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-20", "team_task" => {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-20"}}
+Completed 422 Unprocessable Content in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/team_tasks/" for ::1 at 2025-07-19 22:32:09 -0300
+Processing by TeamTasksController#index as */*
+  Parameters: {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-20", "team_task" => {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-20"}}
+  [1m[36mTeamTask Load (89.2ms)[0m  [1m[34mSELECT "team_tasks".* FROM "team_tasks" /*action='index',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:8:in 'TeamTasksController#index'
+Completed 200 OK in 92ms (Views: 2.3ms | ActiveRecord: 89.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/team_tasks/1" for ::1 at 2025-07-19 22:32:24 -0300
+  
+ActionController::RoutingError (No route matches [POST] "/team_tasks/1"):
+  
+  [1m[35m (80.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2818499705813938860) /*application='TeamRuby'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (77.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='TeamRuby'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (81.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='TeamRuby'*/[0m
+  [1m[35m (80.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(2818499705813938860) /*application='TeamRuby'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (81.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='TeamRuby'*/[0m
+Started POST "/team_tasks/1" for ::1 at 2025-07-19 22:33:08 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (79.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='TeamRuby'*/[0m
+  
+ActionController::RoutingError (No route matches [POST] "/team_tasks/1"):
+  
+Started POST "/team_tasks/" for ::1 at 2025-07-19 22:33:56 -0300
+Processing by TeamTasksController#create as */*
+  Parameters: {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-21", "team_task" => {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-21"}}
+  [1m[36mTRANSACTION (78.8ms)[0m  [1m[35mBEGIN /*action='create',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:20:in 'TeamTasksController#create'
+  [1m[36mTeamTask Create (161.2ms)[0m  [1m[32mINSERT INTO "team_tasks" ("title", "description", "status", "assigned_to", "due_date", "created_at", "updated_at") VALUES ('Criar documentação do Projeto', 'Escrever e detalhar todas as etapas de construção do projeto da Softex', 'Entregue', 'Luiz Gustavo', '2025-07-21', '2025-07-20 01:33:58.416024', '2025-07-20 01:33:58.416024') RETURNING "id" /*action='create',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:20:in 'TeamTasksController#create'
+  [1m[36mTRANSACTION (80.8ms)[0m  [1m[35mCOMMIT /*action='create',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:20:in 'TeamTasksController#create'
+Completed 201 Created in 337ms (Views: 0.4ms | ActiveRecord: 2505.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/team_tasks/" for ::1 at 2025-07-19 22:34:05 -0300
+Processing by TeamTasksController#index as */*
+  Parameters: {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-21", "team_task" => {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-21"}}
+  [1m[36mTeamTask Load (86.6ms)[0m  [1m[34mSELECT "team_tasks".* FROM "team_tasks" /*action='index',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:8:in 'TeamTasksController#index'
+Completed 200 OK in 100ms (Views: 3.4ms | ActiveRecord: 86.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/team_tasks/" for ::1 at 2025-07-19 22:35:00 -0300
+Processing by TeamTasksController#index as */*
+  Parameters: {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-21", "team_task" => {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-21"}}
+  [1m[36mTeamTask Load (79.3ms)[0m  [1m[34mSELECT "team_tasks".* FROM "team_tasks" /*action='index',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:8:in 'TeamTasksController#index'
+Completed 200 OK in 168ms (Views: 10.0ms | ActiveRecord: 395.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/team_tasks/" for ::1 at 2025-07-19 22:35:06 -0300
+Processing by TeamTasksController#create as */*
+  Parameters: {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-21", "team_task" => {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-21"}}
+  [1m[36mTRANSACTION (87.6ms)[0m  [1m[35mBEGIN /*action='create',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:20:in 'TeamTasksController#create'
+  [1m[36mTeamTask Create (171.2ms)[0m  [1m[32mINSERT INTO "team_tasks" ("title", "description", "status", "assigned_to", "due_date", "created_at", "updated_at") VALUES ('Criar documentação do Projeto', 'Escrever e detalhar todas as etapas de construção do projeto da Softex', 'Entregue', 'Luiz Gustavo', '2025-07-21', '2025-07-20 01:35:06.143384', '2025-07-20 01:35:06.143384') RETURNING "id" /*action='create',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:20:in 'TeamTasksController#create'
+  [1m[36mTRANSACTION (77.9ms)[0m  [1m[35mCOMMIT /*action='create',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:20:in 'TeamTasksController#create'
+Completed 201 Created in 259ms (Views: 0.3ms | ActiveRecord: 336.8ms (1 query, 0 cached) | GC: 990.2ms)
+
+
+Started GET "/team_tasks/" for ::1 at 2025-07-19 22:35:13 -0300
+Processing by TeamTasksController#index as */*
+  Parameters: {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-21", "team_task" => {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-21"}}
+  [1m[36mTeamTask Load (77.3ms)[0m  [1m[34mSELECT "team_tasks".* FROM "team_tasks" /*action='index',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:8:in 'TeamTasksController#index'
+Completed 200 OK in 84ms (Views: 6.0ms | ActiveRecord: 78.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/team_tasks/1" for ::1 at 2025-07-19 22:35:16 -0300
+Processing by TeamTasksController#destroy as */*
+  Parameters: {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-21", "id" => "1", "team_task" => {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-21"}}
+  [1m[36mTeamTask Load (159.8ms)[0m  [1m[34mSELECT "team_tasks".* FROM "team_tasks" WHERE "team_tasks"."id" = 1 LIMIT 1 /*action='destroy',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:50:in 'TeamTasksController#set_team_task'
+Completed 404 Not Found in 164ms (ActiveRecord: 159.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find TeamTask with 'id'=1):
+  
+app/controllers/team_tasks_controller.rb:50:in 'TeamTasksController#set_team_task'
+Started DELETE "/team_tasks/2" for ::1 at 2025-07-19 22:35:18 -0300
+Processing by TeamTasksController#destroy as */*
+  Parameters: {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-21", "id" => "2", "team_task" => {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-21"}}
+  [1m[36mTeamTask Load (81.9ms)[0m  [1m[34mSELECT "team_tasks".* FROM "team_tasks" WHERE "team_tasks"."id" = 2 LIMIT 1 /*action='destroy',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:50:in 'TeamTasksController#set_team_task'
+Completed 404 Not Found in 84ms (ActiveRecord: 81.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find TeamTask with 'id'=2):
+  
+app/controllers/team_tasks_controller.rb:50:in 'TeamTasksController#set_team_task'
+Started GET "/team_tasks/2" for ::1 at 2025-07-19 22:35:21 -0300
+Processing by TeamTasksController#show as */*
+  Parameters: {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-21", "id" => "2", "team_task" => {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-21"}}
+  [1m[36mTeamTask Load (162.5ms)[0m  [1m[34mSELECT "team_tasks".* FROM "team_tasks" WHERE "team_tasks"."id" = 2 LIMIT 1 /*action='show',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:50:in 'TeamTasksController#set_team_task'
+Completed 404 Not Found in 165ms (ActiveRecord: 162.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find TeamTask with 'id'=2):
+  
+app/controllers/team_tasks_controller.rb:50:in 'TeamTasksController#set_team_task'
+Started DELETE "/team_tasks/6" for ::1 at 2025-07-19 22:35:27 -0300
+Processing by TeamTasksController#destroy as */*
+  Parameters: {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-21", "id" => "6", "team_task" => {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-21"}}
+  [1m[36mTeamTask Load (162.0ms)[0m  [1m[34mSELECT "team_tasks".* FROM "team_tasks" WHERE "team_tasks"."id" = 6 LIMIT 1 /*action='destroy',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:50:in 'TeamTasksController#set_team_task'
+  [1m[36mTRANSACTION (78.5ms)[0m  [1m[35mBEGIN /*action='destroy',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:44:in 'TeamTasksController#destroy'
+  [1m[36mTeamTask Destroy (160.2ms)[0m  [1m[31mDELETE FROM "team_tasks" WHERE "team_tasks"."id" = 6 /*action='destroy',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:44:in 'TeamTasksController#destroy'
+  [1m[36mTRANSACTION (78.9ms)[0m  [1m[35mCOMMIT /*action='destroy',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:44:in 'TeamTasksController#destroy'
+Completed 204 No Content in 407ms (ActiveRecord: 479.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/team_tasks/6" for ::1 at 2025-07-19 22:35:29 -0300
+Processing by TeamTasksController#show as */*
+  Parameters: {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-21", "id" => "6", "team_task" => {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-21"}}
+  [1m[36mTeamTask Load (82.1ms)[0m  [1m[34mSELECT "team_tasks".* FROM "team_tasks" WHERE "team_tasks"."id" = 6 LIMIT 1 /*action='show',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:50:in 'TeamTasksController#set_team_task'
+Completed 404 Not Found in 84ms (ActiveRecord: 82.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find TeamTask with 'id'=6):
+  
+app/controllers/team_tasks_controller.rb:50:in 'TeamTasksController#set_team_task'
+Started GET "/team_tasks/" for ::1 at 2025-07-19 22:35:32 -0300
+Processing by TeamTasksController#index as */*
+  Parameters: {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-21", "team_task" => {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-21"}}
+  [1m[36mTeamTask Load (87.1ms)[0m  [1m[34mSELECT "team_tasks".* FROM "team_tasks" /*action='index',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:8:in 'TeamTasksController#index'
+Completed 200 OK in 90ms (Views: 3.1ms | ActiveRecord: 87.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/team_tasks/" for ::1 at 2025-07-19 22:36:20 -0300
+Processing by TeamTasksController#index as */*
+  Parameters: {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-21", "team_task" => {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-21"}}
+  [1m[36mTeamTask Load (75.8ms)[0m  [1m[34mSELECT "team_tasks".* FROM "team_tasks" /*action='index',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:8:in 'TeamTasksController#index'
+Completed 200 OK in 157ms (Views: 4.7ms | ActiveRecord: 388.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/team_tasks/" for ::1 at 2025-07-19 22:37:00 -0300
+Processing by TeamTasksController#create as */*
+  Parameters: {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-21", "team_task" => {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-21"}}
+  [1m[36mTRANSACTION (81.9ms)[0m  [1m[35mBEGIN /*action='create',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:20:in 'TeamTasksController#create'
+  [1m[36mTeamTask Create (163.4ms)[0m  [1m[32mINSERT INTO "team_tasks" ("title", "description", "status", "assigned_to", "due_date", "created_at", "updated_at") VALUES ('Criar documentação do Projeto', 'Escrever e detalhar todas as etapas de construção do projeto da Softex', 'Entregue', 'Luiz Gustavo', '2025-07-21', '2025-07-20 01:37:00.539720', '2025-07-20 01:37:00.539720') RETURNING "id" /*action='create',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:20:in 'TeamTasksController#create'
+  [1m[36mTRANSACTION (78.8ms)[0m  [1m[35mCOMMIT /*action='create',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:20:in 'TeamTasksController#create'
+Completed 201 Created in 247ms (Views: 0.3ms | ActiveRecord: 324.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/team_tasks/" for ::1 at 2025-07-19 22:37:04 -0300
+Processing by TeamTasksController#index as */*
+  Parameters: {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-21", "team_task" => {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-21"}}
+  [1m[36mTeamTask Load (83.3ms)[0m  [1m[34mSELECT "team_tasks".* FROM "team_tasks" /*action='index',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:8:in 'TeamTasksController#index'
+Completed 200 OK in 86ms (Views: 2.5ms | ActiveRecord: 83.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/team_tasks/5" for ::1 at 2025-07-19 22:37:10 -0300
+Processing by TeamTasksController#destroy as */*
+  Parameters: {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-21", "id" => "5", "team_task" => {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-21"}}
+  [1m[36mTeamTask Load (157.6ms)[0m  [1m[34mSELECT "team_tasks".* FROM "team_tasks" WHERE "team_tasks"."id" = 5 LIMIT 1 /*action='destroy',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:54:in 'TeamTasksController#set_team_task'
+  [1m[36mTRANSACTION (80.5ms)[0m  [1m[35mBEGIN /*action='destroy',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:44:in 'TeamTasksController#destroy'
+  [1m[36mTeamTask Destroy (162.5ms)[0m  [1m[31mDELETE FROM "team_tasks" WHERE "team_tasks"."id" = 5 /*action='destroy',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:44:in 'TeamTasksController#destroy'
+  [1m[36mTRANSACTION (79.1ms)[0m  [1m[35mCOMMIT /*action='destroy',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:44:in 'TeamTasksController#destroy'
+Completed 200 OK in 405ms (Views: 0.1ms | ActiveRecord: 479.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
