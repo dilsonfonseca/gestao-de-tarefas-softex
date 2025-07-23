@@ -940,3 +940,363 @@ Processing by TeamTasksController#destroy as */*
 Completed 200 OK in 405ms (Views: 0.1ms | ActiveRecord: 479.5ms (2 queries, 0 cached) | GC: 0.0ms)
 
 
+Started GET "/team_tasks/5" for ::1 at 2025-07-19 22:39:33 -0300
+Processing by TeamTasksController#show as */*
+  Parameters: {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-21", "id" => "5", "team_task" => {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-21"}}
+  [1m[36mTeamTask Load (160.6ms)[0m  [1m[34mSELECT "team_tasks".* FROM "team_tasks" WHERE "team_tasks"."id" = 5 LIMIT 1 /*action='show',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:54:in 'TeamTasksController#set_team_task'
+Completed 404 Not Found in 163ms (ActiveRecord: 160.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find TeamTask with 'id'=5):
+  
+app/controllers/team_tasks_controller.rb:54:in 'TeamTasksController#set_team_task'
+Started GET "/team_tasks/" for ::1 at 2025-07-19 22:39:35 -0300
+Processing by TeamTasksController#index as */*
+  Parameters: {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-21", "team_task" => {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-21"}}
+  [1m[36mTeamTask Load (81.2ms)[0m  [1m[34mSELECT "team_tasks".* FROM "team_tasks" /*action='index',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:8:in 'TeamTasksController#index'
+Completed 200 OK in 84ms (Views: 2.5ms | ActiveRecord: 81.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/team_tasks/" for ::1 at 2025-07-23 16:56:41 -0300
+  [1m[35m (215.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY) /*application='TeamRuby'*/[0m
+  [1m[35m (96.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='TeamRuby'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (85.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='TeamRuby'*/[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 1 pending migration:
+
+db/migrate/20250720004257_create_team_tasks.rb
+
+
+):
+  
+activerecord (8.0.2) lib/active_record/migration.rb:743:in 'ActiveRecord::Migration.check_pending_migrations'
+activerecord (8.0.2) lib/active_record/migration.rb:660:in 'block (2 levels) in ActiveRecord::Migration::CheckPending#call'
+activesupport (8.0.2) lib/active_support/file_update_checker.rb:85:in 'ActiveSupport::FileUpdateChecker#execute'
+activerecord (8.0.2) lib/active_record/migration.rb:665:in 'block in ActiveRecord::Migration::CheckPending#call'
+activerecord (8.0.2) lib/active_record/migration.rb:657:in 'Thread::Mutex#synchronize'
+activerecord (8.0.2) lib/active_record/migration.rb:657:in 'ActiveRecord::Migration::CheckPending#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:31:in 'block in ActionDispatch::Callbacks#call'
+activesupport (8.0.2) lib/active_support/callbacks.rb:100:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:30:in 'ActionDispatch::Callbacks#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (8.0.2) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (8.0.2) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/remote_ip.rb:96:in 'ActionDispatch::RemoteIp#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/request_id.rb:34:in 'ActionDispatch::RequestId#call'
+rack (3.1.16) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:61:in 'block in ActionDispatch::ServerTiming#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:26:in 'ActionDispatch::ServerTiming::Subscriber#collect_events'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:60:in 'ActionDispatch::ServerTiming#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.1.16) lib/rack/sendfile.rb:114:in 'Rack::Sendfile#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/host_authorization.rb:143:in 'ActionDispatch::HostAuthorization#call'
+railties (8.0.2) lib/rails/engine.rb:535:in 'Rails::Engine#call'
+puma (6.6.0) lib/puma/configuration.rb:279:in 'Puma::Configuration::ConfigMiddleware#call'
+puma (6.6.0) lib/puma/request.rb:99:in 'block in Puma::Request#handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in 'Puma::ThreadPool#with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in 'Puma::Request#handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in 'Puma::Server#process_client'
+puma (6.6.0) lib/puma/server.rb:254:in 'block in Puma::Server#run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in 'block in Puma::ThreadPool#spawn_thread'
+Started GET "/team_tasks/" for ::1 at 2025-07-23 17:01:59 -0300
+  
+ActiveRecord::NoDatabaseError (We could not find your database: neondb. Available database configurations can be found in config/database.yml.
+
+To resolve this error:
+
+- Did you not create the database, or did you delete it? To create the database, run:
+
+    bin/rails db:create
+
+- Has the database name changed? Verify that config/database.yml contains the correct database name.
+)
+Caused by: PG::ConnectionBad (could not translate host name "postgresql://ep-dry-band-ackstshb-pooler.sa-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require'" to address: Unknown host
+)
+
+Information for: ActiveRecord::NoDatabaseError (We could not find your database: neondb. Available database configurations can be found in config/database.yml.
+
+To resolve this error:
+
+- Did you not create the database, or did you delete it? To create the database, run:
+
+    bin/rails db:create
+
+- Has the database name changed? Verify that config/database.yml contains the correct database name.
+):
+  
+activerecord (8.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:63:in 'ActiveRecord::ConnectionAdapters::PostgreSQLAdapter.new_client'
+activerecord (8.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:939:in 'ActiveRecord::ConnectionAdapters::PostgreSQLAdapter#connect'
+activerecord (8.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:951:in 'ActiveRecord::ConnectionAdapters::PostgreSQLAdapter#reconnect'
+activerecord (8.0.2) lib/active_record/connection_adapters/abstract_adapter.rb:667:in 'block in ActiveRecord::ConnectionAdapters::AbstractAdapter#reconnect!'
+activesupport (8.0.2) lib/active_support/concurrency/null_lock.rb:9:in 'ActiveSupport::Concurrency::NullLock#synchronize'
+activerecord (8.0.2) lib/active_record/connection_adapters/abstract_adapter.rb:666:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#reconnect!'
+activerecord (8.0.2) lib/active_record/connection_adapters/abstract_adapter.rb:771:in 'block in ActiveRecord::ConnectionAdapters::AbstractAdapter#verify!'
+activesupport (8.0.2) lib/active_support/concurrency/null_lock.rb:9:in 'ActiveSupport::Concurrency::NullLock#synchronize'
+activerecord (8.0.2) lib/active_record/connection_adapters/abstract_adapter.rb:761:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#verify!'
+activerecord (8.0.2) lib/active_record/connection_adapters/abstract_adapter.rb:779:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#connect!'
+activerecord (8.0.2) lib/active_record/connection_adapters/abstract_adapter.rb:985:in 'block in ActiveRecord::ConnectionAdapters::AbstractAdapter#with_raw_connection'
+activesupport (8.0.2) lib/active_support/concurrency/null_lock.rb:9:in 'ActiveSupport::Concurrency::NullLock#synchronize'
+activerecord (8.0.2) lib/active_record/connection_adapters/abstract_adapter.rb:984:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#with_raw_connection'
+activerecord (8.0.2) lib/active_record/connection_adapters/postgresql/quoting.rb:128:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::Quoting#quote_string'
+activerecord (8.0.2) lib/active_record/connection_adapters/abstract/quoting.rb:76:in 'ActiveRecord::ConnectionAdapters::Quoting#quote'
+activerecord (8.0.2) lib/active_record/connection_adapters/postgresql/quoting.rb:122:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::Quoting#quote'
+activerecord (8.0.2) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1142:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::SchemaStatements#quoted_scope'
+activerecord (8.0.2) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1119:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::SchemaStatements#data_source_sql'
+activerecord (8.0.2) lib/active_record/connection_adapters/abstract/schema_statements.rb:60:in 'ActiveRecord::ConnectionAdapters::SchemaStatements#table_exists?'
+activerecord (8.0.2) lib/active_record/schema_migration.rb:55:in 'block in ActiveRecord::SchemaMigration#create_table'
+activerecord (8.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:418:in 'ActiveRecord::ConnectionAdapters::ConnectionPool#with_connection'
+activerecord (8.0.2) lib/active_record/schema_migration.rb:54:in 'ActiveRecord::SchemaMigration#create_table'
+activerecord (8.0.2) lib/active_record/migration.rb:1431:in 'ActiveRecord::Migrator#initialize'
+activerecord (8.0.2) lib/active_record/migration.rb:1279:in 'Class#new'
+activerecord (8.0.2) lib/active_record/migration.rb:1279:in 'ActiveRecord::MigrationContext#open'
+activerecord (8.0.2) lib/active_record/migration.rb:763:in 'block (2 levels) in ActiveRecord::Migration.pending_migrations'
+activerecord (8.0.2) lib/active_record/migration/pending_migration_connection.rb:8:in 'ActiveRecord::PendingMigrationConnection.with_temporary_pool'
+activerecord (8.0.2) lib/active_record/migration.rb:762:in 'block in ActiveRecord::Migration.pending_migrations'
+activerecord (8.0.2) lib/active_record/migration.rb:761:in 'Array#each'
+activerecord (8.0.2) lib/active_record/migration.rb:761:in 'ActiveRecord::Migration.pending_migrations'
+activerecord (8.0.2) lib/active_record/migration.rb:740:in 'ActiveRecord::Migration.check_pending_migrations'
+activerecord (8.0.2) lib/active_record/migration.rb:660:in 'block (2 levels) in ActiveRecord::Migration::CheckPending#call'
+activesupport (8.0.2) lib/active_support/file_update_checker.rb:85:in 'ActiveSupport::FileUpdateChecker#execute'
+activerecord (8.0.2) lib/active_record/migration.rb:665:in 'block in ActiveRecord::Migration::CheckPending#call'
+activerecord (8.0.2) lib/active_record/migration.rb:657:in 'Thread::Mutex#synchronize'
+activerecord (8.0.2) lib/active_record/migration.rb:657:in 'ActiveRecord::Migration::CheckPending#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:31:in 'block in ActionDispatch::Callbacks#call'
+activesupport (8.0.2) lib/active_support/callbacks.rb:100:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:30:in 'ActionDispatch::Callbacks#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (8.0.2) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (8.0.2) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/remote_ip.rb:96:in 'ActionDispatch::RemoteIp#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/request_id.rb:34:in 'ActionDispatch::RequestId#call'
+rack (3.1.16) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:61:in 'block in ActionDispatch::ServerTiming#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:26:in 'ActionDispatch::ServerTiming::Subscriber#collect_events'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:60:in 'ActionDispatch::ServerTiming#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.1.16) lib/rack/sendfile.rb:114:in 'Rack::Sendfile#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/host_authorization.rb:143:in 'ActionDispatch::HostAuthorization#call'
+railties (8.0.2) lib/rails/engine.rb:535:in 'Rails::Engine#call'
+puma (6.6.0) lib/puma/configuration.rb:279:in 'Puma::Configuration::ConfigMiddleware#call'
+puma (6.6.0) lib/puma/request.rb:99:in 'block in Puma::Request#handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in 'Puma::ThreadPool#with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in 'Puma::Request#handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in 'Puma::Server#process_client'
+puma (6.6.0) lib/puma/server.rb:254:in 'block in Puma::Server#run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in 'block in Puma::ThreadPool#spawn_thread'
+
+Information for cause: PG::ConnectionBad (could not translate host name "postgresql://ep-dry-band-ackstshb-pooler.sa-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require'" to address: Unknown host
+):
+  
+pg (1.5.9) lib/pg/connection.rb:837:in 'PG::Connection.connect_start'
+pg (1.5.9) lib/pg/connection.rb:837:in 'PG::Connection.connect_to_hosts'
+pg (1.5.9) lib/pg/connection.rb:772:in 'PG::Connection.new'
+pg (1.5.9) lib/pg.rb:63:in 'PG.connect'
+activerecord (8.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:58:in 'ActiveRecord::ConnectionAdapters::PostgreSQLAdapter.new_client'
+activerecord (8.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:939:in 'ActiveRecord::ConnectionAdapters::PostgreSQLAdapter#connect'
+activerecord (8.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:951:in 'ActiveRecord::ConnectionAdapters::PostgreSQLAdapter#reconnect'
+activerecord (8.0.2) lib/active_record/connection_adapters/abstract_adapter.rb:667:in 'block in ActiveRecord::ConnectionAdapters::AbstractAdapter#reconnect!'
+activesupport (8.0.2) lib/active_support/concurrency/null_lock.rb:9:in 'ActiveSupport::Concurrency::NullLock#synchronize'
+activerecord (8.0.2) lib/active_record/connection_adapters/abstract_adapter.rb:666:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#reconnect!'
+activerecord (8.0.2) lib/active_record/connection_adapters/abstract_adapter.rb:771:in 'block in ActiveRecord::ConnectionAdapters::AbstractAdapter#verify!'
+activesupport (8.0.2) lib/active_support/concurrency/null_lock.rb:9:in 'ActiveSupport::Concurrency::NullLock#synchronize'
+activerecord (8.0.2) lib/active_record/connection_adapters/abstract_adapter.rb:761:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#verify!'
+activerecord (8.0.2) lib/active_record/connection_adapters/abstract_adapter.rb:779:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#connect!'
+activerecord (8.0.2) lib/active_record/connection_adapters/abstract_adapter.rb:985:in 'block in ActiveRecord::ConnectionAdapters::AbstractAdapter#with_raw_connection'
+activesupport (8.0.2) lib/active_support/concurrency/null_lock.rb:9:in 'ActiveSupport::Concurrency::NullLock#synchronize'
+activerecord (8.0.2) lib/active_record/connection_adapters/abstract_adapter.rb:984:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#with_raw_connection'
+activerecord (8.0.2) lib/active_record/connection_adapters/postgresql/quoting.rb:128:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::Quoting#quote_string'
+activerecord (8.0.2) lib/active_record/connection_adapters/abstract/quoting.rb:76:in 'ActiveRecord::ConnectionAdapters::Quoting#quote'
+activerecord (8.0.2) lib/active_record/connection_adapters/postgresql/quoting.rb:122:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::Quoting#quote'
+activerecord (8.0.2) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1142:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::SchemaStatements#quoted_scope'
+activerecord (8.0.2) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1119:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::SchemaStatements#data_source_sql'
+activerecord (8.0.2) lib/active_record/connection_adapters/abstract/schema_statements.rb:60:in 'ActiveRecord::ConnectionAdapters::SchemaStatements#table_exists?'
+activerecord (8.0.2) lib/active_record/schema_migration.rb:55:in 'block in ActiveRecord::SchemaMigration#create_table'
+activerecord (8.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:418:in 'ActiveRecord::ConnectionAdapters::ConnectionPool#with_connection'
+activerecord (8.0.2) lib/active_record/schema_migration.rb:54:in 'ActiveRecord::SchemaMigration#create_table'
+activerecord (8.0.2) lib/active_record/migration.rb:1431:in 'ActiveRecord::Migrator#initialize'
+activerecord (8.0.2) lib/active_record/migration.rb:1279:in 'Class#new'
+activerecord (8.0.2) lib/active_record/migration.rb:1279:in 'ActiveRecord::MigrationContext#open'
+activerecord (8.0.2) lib/active_record/migration.rb:763:in 'block (2 levels) in ActiveRecord::Migration.pending_migrations'
+activerecord (8.0.2) lib/active_record/migration/pending_migration_connection.rb:8:in 'ActiveRecord::PendingMigrationConnection.with_temporary_pool'
+activerecord (8.0.2) lib/active_record/migration.rb:762:in 'block in ActiveRecord::Migration.pending_migrations'
+activerecord (8.0.2) lib/active_record/migration.rb:761:in 'Array#each'
+activerecord (8.0.2) lib/active_record/migration.rb:761:in 'ActiveRecord::Migration.pending_migrations'
+activerecord (8.0.2) lib/active_record/migration.rb:740:in 'ActiveRecord::Migration.check_pending_migrations'
+activerecord (8.0.2) lib/active_record/migration.rb:660:in 'block (2 levels) in ActiveRecord::Migration::CheckPending#call'
+activesupport (8.0.2) lib/active_support/file_update_checker.rb:85:in 'ActiveSupport::FileUpdateChecker#execute'
+activerecord (8.0.2) lib/active_record/migration.rb:665:in 'block in ActiveRecord::Migration::CheckPending#call'
+activerecord (8.0.2) lib/active_record/migration.rb:657:in 'Thread::Mutex#synchronize'
+activerecord (8.0.2) lib/active_record/migration.rb:657:in 'ActiveRecord::Migration::CheckPending#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:31:in 'block in ActionDispatch::Callbacks#call'
+activesupport (8.0.2) lib/active_support/callbacks.rb:100:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:30:in 'ActionDispatch::Callbacks#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (8.0.2) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (8.0.2) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/remote_ip.rb:96:in 'ActionDispatch::RemoteIp#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/request_id.rb:34:in 'ActionDispatch::RequestId#call'
+rack (3.1.16) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:61:in 'block in ActionDispatch::ServerTiming#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:26:in 'ActionDispatch::ServerTiming::Subscriber#collect_events'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:60:in 'ActionDispatch::ServerTiming#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.1.16) lib/rack/sendfile.rb:114:in 'Rack::Sendfile#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/host_authorization.rb:143:in 'ActionDispatch::HostAuthorization#call'
+railties (8.0.2) lib/rails/engine.rb:535:in 'Rails::Engine#call'
+puma (6.6.0) lib/puma/configuration.rb:279:in 'Puma::Configuration::ConfigMiddleware#call'
+puma (6.6.0) lib/puma/request.rb:99:in 'block in Puma::Request#handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in 'Puma::ThreadPool#with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in 'Puma::Request#handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in 'Puma::Server#process_client'
+puma (6.6.0) lib/puma/server.rb:254:in 'block in Puma::Server#run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in 'block in Puma::ThreadPool#spawn_thread'
+  [1m[35m (104.8ms)[0m  [1m[35mCREATE DATABASE "neondb" ENCODING = 'unicode' /*application='TeamRuby'*/[0m
+  [1m[35m (110.0ms)[0m  [1m[35mCREATE DATABASE "neondb" ENCODING = 'unicode' /*application='TeamRuby'*/[0m
+  [1m[35m (112.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "neondb" /*application='TeamRuby'*/[0m
+  [1m[35m (113.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "neondb" /*application='TeamRuby'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (105.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='TeamRuby'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (81.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='TeamRuby'*/[0m
+  [1m[35mSQL (82.2ms)[0m  [1m[35mSET search_path TO public /*application='TeamRuby'*/[0m
+  [1m[35m (6650.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "neondb" /*application='TeamRuby'*/[0m
+Started GET "/team_tasks/" for ::1 at 2025-07-23 17:06:39 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (84.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='TeamRuby'*/[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 1 pending migration:
+
+db/migrate/20250720004257_create_team_tasks.rb
+
+
+):
+  
+activerecord (8.0.2) lib/active_record/migration.rb:743:in 'ActiveRecord::Migration.check_pending_migrations'
+activerecord (8.0.2) lib/active_record/migration.rb:660:in 'block (2 levels) in ActiveRecord::Migration::CheckPending#call'
+activesupport (8.0.2) lib/active_support/file_update_checker.rb:85:in 'ActiveSupport::FileUpdateChecker#execute'
+activerecord (8.0.2) lib/active_record/migration.rb:665:in 'block in ActiveRecord::Migration::CheckPending#call'
+activerecord (8.0.2) lib/active_record/migration.rb:657:in 'Thread::Mutex#synchronize'
+activerecord (8.0.2) lib/active_record/migration.rb:657:in 'ActiveRecord::Migration::CheckPending#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:31:in 'block in ActionDispatch::Callbacks#call'
+activesupport (8.0.2) lib/active_support/callbacks.rb:100:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:30:in 'ActionDispatch::Callbacks#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (8.0.2) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (8.0.2) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/remote_ip.rb:96:in 'ActionDispatch::RemoteIp#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/request_id.rb:34:in 'ActionDispatch::RequestId#call'
+rack (3.1.16) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:61:in 'block in ActionDispatch::ServerTiming#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:26:in 'ActionDispatch::ServerTiming::Subscriber#collect_events'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:60:in 'ActionDispatch::ServerTiming#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.1.16) lib/rack/sendfile.rb:114:in 'Rack::Sendfile#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/host_authorization.rb:143:in 'ActionDispatch::HostAuthorization#call'
+railties (8.0.2) lib/rails/engine.rb:535:in 'Rails::Engine#call'
+puma (6.6.0) lib/puma/configuration.rb:279:in 'Puma::Configuration::ConfigMiddleware#call'
+puma (6.6.0) lib/puma/request.rb:99:in 'block in Puma::Request#handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in 'Puma::ThreadPool#with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in 'Puma::Request#handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in 'Puma::Server#process_client'
+puma (6.6.0) lib/puma/server.rb:254:in 'block in Puma::Server#run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in 'block in Puma::ThreadPool#spawn_thread'
+  [1m[35m (83.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2818499705813938860) /*application='TeamRuby'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (81.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='TeamRuby'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (111.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='TeamRuby'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (94.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-07-23 20:06:59.508474', '2025-07-23 20:06:59.508477') RETURNING "key" /*application='TeamRuby'*/[0m
+Migrating to CreateTeamTasks (20250720004257)
+  [1m[36mTRANSACTION (77.3ms)[0m  [1m[35mBEGIN /*application='TeamRuby'*/[0m
+  [1m[35m (287.8ms)[0m  [1m[35mCREATE TABLE "team_tasks" ("id" bigserial primary key, "title" character varying NOT NULL, "description" text NOT NULL, "status" character varying NOT NULL, "assigned_to" character varying NOT NULL, "due_date" date NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='TeamRuby'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (85.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250720004257') RETURNING "version" /*application='TeamRuby'*/[0m
+  [1m[36mTRANSACTION (83.1ms)[0m  [1m[35mCOMMIT /*application='TeamRuby'*/[0m
+  [1m[35m (80.8ms)[0m  [1m[34mSELECT pg_advisory_unlock(2818499705813938860) /*application='TeamRuby'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (84.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='TeamRuby'*/[0m
+Started GET "/team_tasks/" for ::1 at 2025-07-23 17:07:13 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (80.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='TeamRuby'*/[0m
+Processing by TeamTasksController#index as */*
+  [1m[36mTeamTask Load (1208.6ms)[0m  [1m[34mSELECT "team_tasks".* FROM "team_tasks" /*action='index',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:8:in 'TeamTasksController#index'
+Completed 200 OK in 1407ms (Views: -574.1ms | ActiveRecord: 1785.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/team_tasks/" for ::1 at 2025-07-23 17:07:25 -0300
+Processing by TeamTasksController#index as */*
+  [1m[36mTeamTask Load (76.3ms)[0m  [1m[34mSELECT "team_tasks".* FROM "team_tasks" /*action='index',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:8:in 'TeamTasksController#index'
+Completed 200 OK in 78ms (Views: 2.0ms | ActiveRecord: 76.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/team_tasks/" for ::1 at 2025-07-23 17:08:07 -0300
+Processing by TeamTasksController#create as */*
+  Parameters: {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-20", "team_task" => {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-20"}}
+Completed 422 Unprocessable Content in 78ms (Views: 0.1ms | ActiveRecord: 369.1ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/team_tasks/" for ::1 at 2025-07-23 17:08:24 -0300
+Processing by TeamTasksController#create as */*
+  Parameters: {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-20", "team_task" => {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-20"}}
+Completed 422 Unprocessable Content in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/team_tasks/" for ::1 at 2025-07-23 17:08:34 -0300
+Processing by TeamTasksController#index as */*
+  Parameters: {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-20", "team_task" => {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-20"}}
+  [1m[36mTeamTask Load (77.1ms)[0m  [1m[34mSELECT "team_tasks".* FROM "team_tasks" /*action='index',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:8:in 'TeamTasksController#index'
+Completed 200 OK in 79ms (Views: 2.0ms | ActiveRecord: 77.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/team_tasks/" for ::1 at 2025-07-23 17:08:50 -0300
+Processing by TeamTasksController#create as */*
+  Parameters: {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-20", "team_task" => {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-20"}}
+Completed 422 Unprocessable Content in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/team_tasks/" for ::1 at 2025-07-23 17:09:02 -0300
+Processing by TeamTasksController#create as */*
+  Parameters: {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-30", "team_task" => {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-30"}}
+  [1m[36mTRANSACTION (78.6ms)[0m  [1m[35mBEGIN /*action='create',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:20:in 'TeamTasksController#create'
+  [1m[36mTeamTask Create (160.8ms)[0m  [1m[32mINSERT INTO "team_tasks" ("title", "description", "status", "assigned_to", "due_date", "created_at", "updated_at") VALUES ('Criar documentação do Projeto', 'Escrever e detalhar todas as etapas de construção do projeto da Softex', 'Entregue', 'Luiz Gustavo', '2025-07-30', '2025-07-23 20:09:02.948111', '2025-07-23 20:09:02.948111') RETURNING "id" /*action='create',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:20:in 'TeamTasksController#create'
+  [1m[36mTRANSACTION (74.3ms)[0m  [1m[35mCOMMIT /*action='create',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:20:in 'TeamTasksController#create'
+Completed 201 Created in 240ms (Views: 0.4ms | ActiveRecord: 313.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/team_tasks/" for ::1 at 2025-07-23 17:09:07 -0300
+Processing by TeamTasksController#index as */*
+  Parameters: {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-30", "team_task" => {"title" => "Criar documentação do Projeto", "description" => "Escrever e detalhar todas as etapas de construção do projeto da Softex", "status" => "Entregue", "assigned_to" => "Luiz Gustavo", "due_date" => "2025-07-30"}}
+  [1m[36mTeamTask Load (75.5ms)[0m  [1m[34mSELECT "team_tasks".* FROM "team_tasks" /*action='index',application='TeamRuby',controller='team_tasks'*/[0m
+  ↳ app/controllers/team_tasks_controller.rb:8:in 'TeamTasksController#index'
+Completed 200 OK in 78ms (Views: 2.7ms | ActiveRecord: 75.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+

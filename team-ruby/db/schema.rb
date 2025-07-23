@@ -13,14 +13,43 @@
 ActiveRecord::Schema[8.0].define(version: 2025_07_20_004257) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
+  enable_extension "uuid-ossp"
+
+  create_table "Notes", id: :serial, force: :cascade do |t|
+    t.string "title", limit: 128
+    t.string "message", limit: 2048, null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
+    t.datetime "deleted_at", precision: nil
+  end
+
+  create_table "Tasks", id: :uuid, default: nil, force: :cascade do |t|
+    t.string "task", limit: 255, null: false
+    t.boolean "check", default: false
+    t.timestamptz "date"
+    t.uuid "userId", null: false
+    t.timestamptz "createdAt", null: false
+    t.timestamptz "updatedAt", null: false
+  end
+
+  create_table "Users", id: :uuid, default: nil, force: :cascade do |t|
+    t.string "username", limit: 255, null: false
+    t.string "password", limit: 255, null: false
+    t.timestamptz "createdAt", null: false
+    t.timestamptz "updatedAt", null: false
+
+    t.unique_constraint ["username"], name: "Users_username_key"
+  end
 
   create_table "team_tasks", force: :cascade do |t|
-    t.string "title"
-    t.text "description"
-    t.string "status"
-    t.string "assigned_to"
-    t.date "due_date"
+    t.string "title", null: false
+    t.text "description", null: false
+    t.string "status", null: false
+    t.string "assigned_to", null: false
+    t.date "due_date", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_foreign_key "Tasks", "Users", column: "userId", name: "Tasks_userId_fkey", on_update: :cascade, on_delete: :cascade
 end
